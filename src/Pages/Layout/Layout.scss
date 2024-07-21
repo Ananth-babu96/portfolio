@@ -1,0 +1,52 @@
+@import "../../globalStyles/globalStyles.scss";
+@import "animate.css";
+
+.wrapper {
+   height: 100vh;
+   scroll-snap-type: y mandatory;
+   scroll-padding-top: 50px;
+   overflow-y: scroll;
+   position: relative;
+
+   & section {
+      min-height: 100vh;
+      height: 100vh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      & .container {
+         color: #fff;
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+         padding: 0 14%;
+
+         & .text-zone {
+            & .title {
+               color: $primeColor;
+               font-weight: 800;
+               font-size: 32px;
+               margin-bottom: 28px;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 560px) {
+   .wrapper {
+      & section {
+         & .container {
+            padding: 0 8%;
+
+            & .text-zone {
+               & .title {
+                  font-size: 22px;
+               }
+            }
+            & .content {
+               width: 80%;
+            }
+         }
+      }
+   }
+}

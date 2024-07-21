@@ -1,0 +1,17 @@
+.about {
+   & .text-zone {
+      & .about-ph {
+         margin-bottom: 26px;
+      }
+   }
+}
+
+@media (max-width: 560px) {
+   .about {
+      & .text-zone {
+         & .about-ph {
+            margin-bottom: 22px;
+         }
+      }
+   }
+}

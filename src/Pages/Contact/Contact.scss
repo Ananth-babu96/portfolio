@@ -1,0 +1,171 @@
+@import "../../globalStyles/globalStyles.scss";
+@import "animate.css";
+
+.contact {
+   position: relative;
+   & .success-message {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      visibility: hidden;
+      z-index: 1999;
+
+      &.show {
+         visibility: visible;
+
+         & .message-box {
+            height: 50%;
+            width: 50%;
+            background: $bgColor;
+            border-radius: 24px;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            opacity: 0;
+            color: #fff;
+            animation: bounceIn 0.6s forwards;
+            margin-bottom: 10%;
+
+            & .icon {
+               color: $primeColor;
+               font-size: 84px;
+            }
+            & button {
+               width: 120px;
+               height: 36px;
+               background: $darkGrey;
+               border: none;
+               outline: none;
+               color: #fff;
+               transform: translate(-5px, -5px);
+               box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+               transition: all 0.1s;
+               cursor: pointer;
+               text-transform: uppercase;
+
+               &:hover {
+                  transform: translate(0, 0);
+                  box-shadow: none;
+               }
+            }
+         }
+      }
+   }
+   & .content {
+      width: 600px;
+      margin: auto;
+      margin-top: 20px;
+      & form {
+         display: flex;
+         flex-direction: column;
+         gap: 22px;
+         width: 100%;
+         position: relative;
+
+         & .form-text {
+         }
+
+         & input,
+         & textarea {
+            height: 55px;
+            background: $darkGrey;
+            border: none;
+            outline: none;
+            padding: 22px;
+            color: #fff;
+            transform: translate(-5px, -5px);
+            box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.1s ease-out;
+
+            &:hover {
+               transform: translate(0, 0);
+               box-shadow: none;
+            }
+         }
+         & textarea {
+            height: 130px;
+            min-height: 130px;
+            max-height: 160px;
+            min-width: 100%;
+
+            max-width: 100%;
+         }
+         & button {
+            width: 120px;
+            height: 36px;
+            background: $darkGrey;
+            border: none;
+            outline: none;
+            color: #fff;
+            transform: translate(-5px, -5px);
+            box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.1s;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &:hover {
+               transform: translate(0, 0);
+               box-shadow: none;
+            }
+         }
+      }
+   }
+   .footer {
+      width: 50%;
+      margin: auto;
+      margin-top: 28px;
+
+      display: flex;
+      justify-content: space-between;
+   }
+}
+@media (max-width: 760px) {
+   .contact {
+      & .success-message {
+         & .message-box {
+            width: 95% !important;
+            font-size: 20px;
+            padding: 0 12px;
+         }
+      }
+      & .content {
+         width: 90% !important;
+         & form {
+            & .form-text {
+               font-size: 14px;
+            }
+         }
+      }
+   }
+}
+@media (max-width: 360px) {
+   .contact {
+      & .success-message {
+         & .message-box {
+            font-size: 16px;
+
+            & .icon {
+               font-size: 64px !important;
+            }
+         }
+      }
+      & .content {
+         width: 95% !important;
+      }
+      & form {
+         & .form-text {
+            font-size: 12px !important;
+         }
+      }
+   }
+}

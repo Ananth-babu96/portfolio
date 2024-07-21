@@ -1,0 +1,47 @@
+@import "../../globalStyles/globalStyles.scss";
+@import "animate.css";
+.stacks {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 24px;
+   width: 100%;
+   height: 55px;
+   margin-top: 24px;
+
+   & .stack {
+      font-size: 30px;
+      color: $primeColor;
+      opacity: 0;
+      animation: bounceIn 1s 2s forwards;
+   }
+}
+
+@for $i from 1 through 16 {
+   .stack._#{$i} {
+      animation-delay: #{$i/10}s;
+   }
+}
+@media (max-width: 860px) {
+   .stacks {
+      justify-content: center;
+   }
+}
+
+@media (max-width: 560px) {
+   .stacks {
+      gap: 16px;
+      & .stack {
+         font-size: 22px;
+      }
+   }
+}
+
+@media (max-width: 360px) {
+   .stacks {
+      gap: 10px;
+      & .stack {
+         font-size: 18px;
+      }
+   }
+}

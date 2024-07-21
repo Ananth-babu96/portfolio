@@ -1,0 +1,90 @@
+@import "../../globalStyles/globalStyles.scss";
+.header {
+   height: 50px;
+   width: 100%;
+   position: sticky;
+   top: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: $bgColor;
+   padding: 0 14%;
+   color: #fff;
+   z-index: 999;
+
+   & .name {
+      font-size: 22px;
+
+      & h4 > span {
+         color: $primeColor;
+      }
+   }
+
+   .ham-menu {
+      width: 30px;
+      height: 15px;
+      position: relative;
+      display: none;
+      cursor: pointer;
+      & span {
+         width: 70%;
+         height: 5px;
+         background: #fff;
+         border-radius: 30px;
+         position: absolute;
+         transition: all 0.3s;
+
+         &:nth-of-type(1) {
+            top: 0;
+
+            left: 0;
+         }
+         &:nth-of-type(2) {
+            bottom: 0;
+            right: 0;
+         }
+      }
+
+      &.open {
+         & span {
+            width: 100%;
+            &:nth-of-type(1) {
+               top: 50%;
+               transform: translateY(-50%) rotate(45deg);
+            }
+            &:nth-of-type(2) {
+               bottom: 50%;
+               transform: translateY(50%) rotate(-45deg);
+            }
+         }
+      }
+   }
+   & ul {
+      list-style: none;
+      display: flex;
+      gap: 14px;
+
+      & li {
+         cursor: pointer;
+         transition: color 0.2s;
+
+         &:hover {
+            color: $primeColor;
+         }
+         &.current {
+            color: $primeColor;
+         }
+      }
+   }
+}
+
+@media (max-width: 560px) {
+   .header {
+      ul {
+         display: none;
+      }
+      .ham-menu {
+         display: block;
+      }
+   }
+}
