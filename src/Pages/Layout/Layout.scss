@@ -3,16 +3,13 @@
 
 .wrapper {
    height: 100vh;
-   scroll-snap-type: y mandatory;
-   scroll-padding-top: 50px;
    overflow-y: scroll;
    position: relative;
-
+   scroll-padding-top: 50px;
    & section {
       min-height: 100vh;
       height: 100vh;
-      scroll-snap-align: start;
-      scroll-snap-stop: always;
+
       & .container {
          color: #fff;
          display: flex;

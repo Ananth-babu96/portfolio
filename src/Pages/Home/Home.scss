@@ -2,8 +2,8 @@
 @import "animate.css";
 .home {
    height: 100% !important;
-   justify-content: space-evenly;
    align-items: center;
+   justify-content: center;
    padding: 0 14%;
 
    .home-top {
@@ -25,18 +25,16 @@
          opacity: 0;
          animation: fadeIn 0.8s 0.8s forwards;
          text-align: left;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
 
          & h1 {
             font-size: clamp(23px, 4vw, 125px);
-            margin: 14px 0;
 
             & span {
                color: $primeColor;
             }
-         }
-
-         & .about-me {
-            margin: 14px 0;
          }
       }
    }
@@ -45,7 +43,6 @@
       display: flex;
       align-items: center;
       gap: 20%;
-      padding-top: 12px;
 
       & .links {
          display: flex;
@@ -71,7 +68,7 @@
       }
    }
    .scroll-down {
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: flex-start;
 
@@ -130,6 +127,7 @@
    .home {
       & .home-top {
          flex-direction: column;
+         align-items: flex-start;
 
          & .img-container {
             & img {
@@ -139,11 +137,9 @@
          }
 
          & .text-zone {
-            text-align: center;
          }
 
          & .social-links {
-            justify-content: center;
          }
       }
       .scroll-down {

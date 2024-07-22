@@ -7,7 +7,6 @@
    gap: 24px;
    width: 100%;
    height: 55px;
-   margin-top: 24px;
 
    & .stack {
       font-size: 30px;
@@ -24,7 +23,6 @@
 }
 @media (max-width: 860px) {
    .stacks {
-      justify-content: center;
    }
 }
 
