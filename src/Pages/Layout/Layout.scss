@@ -17,6 +17,11 @@
             width: 100%;
          }
       }
+      & .home-separator {
+         border: 1px solid $primeColor;
+         margin-top: 30px;
+         display: none;
+      }
    }
    & .right {
       width: 50%;
@@ -30,10 +35,10 @@
                text-align: left;
                & .title {
                   color: $primeColor;
-                  font-size: 18px;
+                  font-size: 16px;
+                  font-weight: 800;
                   text-transform: uppercase;
                   padding-bottom: 14px;
-                  display: none;
                }
             }
 
@@ -83,6 +88,10 @@
       & .left {
          position: relative;
          width: 100%;
+
+         & .separator {
+            display: block;
+         }
       }
    }
 }

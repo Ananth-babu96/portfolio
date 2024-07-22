@@ -83,6 +83,7 @@ const Layout = () => {
                   contactRef={contactRef}
                />
             </section>
+            <hr className="separator home-separator" />
          </div>
          <div className="right">
             <section ref={aboutRef} data-section="about-section">
