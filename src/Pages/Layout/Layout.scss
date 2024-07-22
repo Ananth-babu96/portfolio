@@ -1,47 +1,96 @@
 @import "../../globalStyles/globalStyles.scss";
 @import "animate.css";
-
 .wrapper {
    height: 100vh;
-   overflow-y: scroll;
-   position: relative;
-   scroll-padding-top: 50px;
-   & section {
-      min-height: 100vh;
-      height: 100vh;
+   display: flex;
+   padding: 40px 6%;
+   width: 100vw;
+   & .left {
+      height: 100%;
+      position: sticky;
+      top: 0;
+      width: 50%;
 
-      & .container {
-         color: #fff;
-         display: flex;
-         flex-direction: column;
-         height: 100%;
-         padding: 0 14%;
-
-         & .text-zone {
-            & .title {
-               color: $primeColor;
-               font-weight: 800;
-               font-size: 32px;
-               margin-bottom: 28px;
-            }
+      & section {
+         width: 100%;
+         & .container {
+            width: 100%;
          }
       }
    }
-}
+   & .right {
+      width: 50%;
+      height: 100%;
+      opacity: 0;
+      animation: fadeIn 1.2s 1.2s forwards;
 
-@media (max-width: 560px) {
-   .wrapper {
       & section {
          & .container {
-            padding: 0 8%;
-
+            margin: 35px 0;
             & .text-zone {
+               text-align: left;
                & .title {
-                  font-size: 22px;
+                  color: $primeColor;
+                  font-size: 18px;
+                  text-transform: uppercase;
+                  padding-bottom: 14px;
+                  display: none;
                }
             }
-            & .content {
-               width: 80%;
+
+            & p {
+               color: #fff;
+               margin-bottom: 14px;
+
+               & span {
+                  color: $primeColor;
+               }
+            }
+         }
+      }
+      .separator {
+         border: 1px solid $primeColor;
+      }
+   }
+}
+@media (max-width: 960px) {
+   .wrapper {
+      & .right {
+      }
+   }
+}
+@media (max-width: 860px) {
+   .wrapper {
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 40px;
+      & .right {
+         width: 100%;
+
+         & section {
+            & .container {
+               & .text-zone {
+                  & .title {
+                     display: block;
+                  }
+               }
+            }
+         }
+      }
+      & .left {
+         position: relative;
+         width: 100%;
+      }
+   }
+}
+@media (max-width: 560px) {
+   .wrapper {
+      & .right {
+         & section {
+            & .container {
+               & .text-zone {
+               }
             }
          }
       }

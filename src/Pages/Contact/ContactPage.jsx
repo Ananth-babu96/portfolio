@@ -72,44 +72,42 @@ const ContactPage = () => {
          <div className="text-zone">
             <p className="title">Contact</p>
          </div>
-         <div className="content">
-            <form ref={form} onSubmit={handleSubmit}>
-               <p className="form-text">
-                  Have a project for me? Any questions about something I've
-                  built? I'd love to hear from you, give me a shout by using the
-                  form below if you'd like to get in contact with me.
-               </p>
-               <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Name"
-                  autoComplete="off"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-               />
-               <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  autoComplete="off"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-               />
-               <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Email"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-               ></textarea>
-               <button>{isLoading ? <Loading /> : "send"}</button>
-            </form>
-         </div>
+         <form ref={form} onSubmit={handleSubmit}>
+            <p className="form-text">
+               Have a project for me? Any questions about something I've built?
+               I'd love to hear from you, give me a shout by using the form
+               below if you'd like to get in contact with me.
+            </p>
+            <input
+               type="text"
+               name="name"
+               id="name"
+               placeholder="Name"
+               autoComplete="off"
+               value={name}
+               onChange={(e) => setName(e.target.value)}
+               required
+            />
+            <input
+               type="text"
+               name="email"
+               id="email"
+               placeholder="Email"
+               autoComplete="off"
+               value={email}
+               onChange={(e) => setEmail(e.target.value)}
+               required
+            />
+            <textarea
+               name="message"
+               id="message"
+               placeholder="Email"
+               value={message}
+               onChange={(e) => setMessage(e.target.value)}
+               required
+            ></textarea>
+            <button>{isLoading ? <Loading /> : "send"}</button>
+         </form>
       </div>
    );
 };

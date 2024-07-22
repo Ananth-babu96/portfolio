@@ -3,9 +3,10 @@
 
 .contact {
    position: relative;
+   width: 100%;
+
    & .success-message {
       position: absolute;
-      height: 100vh;
       width: 100%;
       top: 0;
       left: 0;
@@ -61,110 +62,56 @@
          }
       }
    }
-   & .content {
-      width: 600px;
-      margin: auto;
-      margin-top: 20px;
-      & form {
-         display: flex;
-         flex-direction: column;
-         gap: 22px;
-         width: 100%;
-         position: relative;
 
-         & .form-text {
-         }
-
-         & input,
-         & textarea {
-            height: 55px;
-            background: $darkGrey;
-            border: none;
-            outline: none;
-            padding: 22px;
-            color: #fff;
-            transform: translate(-5px, -5px);
-            box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.1s ease-out;
-
-            &:hover {
-               transform: translate(0, 0);
-               box-shadow: none;
-            }
-         }
-         & textarea {
-            height: 130px;
-            min-height: 130px;
-            max-height: 160px;
-            min-width: 100%;
-
-            max-width: 100%;
-         }
-         & button {
-            width: 120px;
-            height: 36px;
-            background: $darkGrey;
-            border: none;
-            outline: none;
-            color: #fff;
-            transform: translate(-5px, -5px);
-            box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.1s;
-            cursor: pointer;
-            text-transform: uppercase;
-
-            &:hover {
-               transform: translate(0, 0);
-               box-shadow: none;
-            }
-         }
-      }
-   }
-   .footer {
-      width: 50%;
-      margin: auto;
-      margin-top: 28px;
-
+   & form {
       display: flex;
-      justify-content: space-between;
-   }
-}
-@media (max-width: 760px) {
-   .contact {
-      & .success-message {
-         & .message-box {
-            width: 95% !important;
-            font-size: 20px;
-            padding: 0 12px;
-         }
-      }
-      & .content {
-         width: 90% !important;
-         & form {
-            & .form-text {
-               font-size: 14px;
-            }
-         }
-      }
-   }
-}
-@media (max-width: 360px) {
-   .contact {
-      & .success-message {
-         & .message-box {
-            font-size: 16px;
+      flex-direction: column;
+      gap: 22px;
+      width: 100%;
+      position: relative;
 
-            & .icon {
-               font-size: 64px !important;
-            }
+      & input,
+      & textarea {
+         height: 55px;
+         width: 100%;
+         background: $darkGrey;
+         border: none;
+         outline: none;
+         padding: 22px;
+         color: #fff;
+         transform: translate(-5px, -5px);
+         box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+         transition: all 0.1s ease-out;
+
+         &:hover {
+            transform: translate(0, 0);
+            box-shadow: none;
          }
       }
-      & .content {
-         width: 95% !important;
+      & textarea {
+         max-width: 100%;
+         min-width: 100%;
+         height: 145px;
+         min-height: 145px;
+         max-height: 145px;
+         resize: vertical;
       }
-      & form {
-         & .form-text {
-            font-size: 12px !important;
+      & button {
+         width: 120px;
+         height: 36px;
+         background: $darkGrey;
+         border: none;
+         outline: none;
+         color: #fff;
+         transform: translate(-5px, -5px);
+         box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+         transition: all 0.1s;
+         cursor: pointer;
+         text-transform: uppercase;
+
+         &:hover {
+            transform: translate(0, 0);
+            box-shadow: none;
          }
       }
    }

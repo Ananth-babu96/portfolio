@@ -72,18 +72,36 @@ const Layout = () => {
             projectsRef={projectsRef}
             contactRef={contactRef}
          />
-         <section ref={homeRef} data-section="home-section">
-            <Home scrollFunction={sideMenuNavigation} reference={aboutRef} />
-         </section>
-         <section ref={aboutRef} data-section="about-section">
-            <About />
-         </section>
-         <section ref={projectsRef} data-section="projects-section">
-            <Projects />
-         </section>
-         <section ref={contactRef} data-section="contact-section">
-            <ContactPage />
-         </section>
+         <div className="left">
+            <section ref={homeRef} data-section="home-section">
+               <Home
+                  scrollFunction={sideMenuNavigation}
+                  reference={aboutRef}
+                  sideMenuNavigation={sideMenuNavigation}
+                  aboutRef={aboutRef}
+                  projectsRef={projectsRef}
+                  contactRef={contactRef}
+               />
+            </section>
+         </div>
+         <div className="right">
+            <section ref={aboutRef} data-section="about-section">
+               <About />
+            </section>
+            <hr className="separator" />
+            <section
+               ref={projectsRef}
+               data-section="projects-section"
+               style={{ height: "300px" }}
+            >
+               <Projects />
+            </section>
+            <hr className="separator" />
+            <section ref={contactRef} data-section="contact-section">
+               <ContactPage />
+            </section>
+            <hr className="separator" />
+         </div>
       </div>
    );
 };

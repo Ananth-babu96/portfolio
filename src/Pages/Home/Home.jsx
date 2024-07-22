@@ -19,7 +19,14 @@ import { TbBrandRedux } from "react-icons/tb";
 import pic from "../../images/portfolio-pic-2.png";
 import { FaJsSquare } from "react-icons/fa";
 import AnimatedIcons from "../../Components/AnimatedIcons/AnimatedIcons";
-const Home = ({ scrollFunction, reference }) => {
+const Home = ({
+   scrollFunction,
+   reference,
+   sideMenuNavigation,
+   aboutRef,
+   contactRef,
+   projectsRef,
+}) => {
    const icons = [
       <FaHtml5 />,
       <FaCss3 />,
@@ -34,9 +41,6 @@ const Home = ({ scrollFunction, reference }) => {
    return (
       <div className="container home">
          <div className="home-top">
-            <div className="img-container">
-               <img src={pic} alt="" />
-            </div>
             <div className="text-zone">
                <h1>
                   Hi, i'm a <br />

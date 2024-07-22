@@ -4,12 +4,12 @@
    display: flex;
    justify-content: flex-start;
    align-items: center;
-   gap: 24px;
+   gap: 20px;
    width: 100%;
    height: 55px;
 
    & .stack {
-      font-size: 30px;
+      font-size: clamp(18px, 3vw, 22px);
       color: $primeColor;
       opacity: 0;
       animation: bounceIn 1s 2s forwards;
