@@ -46,13 +46,31 @@ const Home = ({}) => {
                <div className="social-links">
                   <div className="links">
                      <div className="link">
-                        <FaGithub />
+                        <a
+                           href="https://github.com/Ananth-babu96"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           <FaGithub />
+                        </a>
                      </div>
                      <div className="link">
-                        <FaLinkedinIn />
+                        <a
+                           href="https://www.linkedin.com/in/ananth-babu-94b171315/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           <FaLinkedinIn />
+                        </a>
                      </div>
                      <div className="link">
-                        <FaInstagram />
+                        <a
+                           href="https://www.instagram.com/nebula_cluster_616/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           <FaInstagram />
+                        </a>
                      </div>
                   </div>
                </div>
