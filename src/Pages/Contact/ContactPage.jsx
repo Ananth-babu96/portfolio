@@ -4,7 +4,6 @@ import emailjs from "@emailjs/browser";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import Loading from "../../Components/Loading/Loading";
 
-import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 const ContactPage = () => {
    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -17,6 +16,7 @@ const ContactPage = () => {
    const [success, setSuccess] = useState(false);
    const [isLoading, setIsLoading] = useState(false);
 
+   //success message popup----------------------------------------------
    useEffect(() => {
       if (success) {
          document.querySelector(".wrapper").style.overflowY = "hidden";
@@ -28,6 +28,8 @@ const ContactPage = () => {
          document.querySelector(".wrapper").style.overflowY = "scroll";
       };
    }, [success]);
+   //-----------------------------------------------------------------
+   // form submission------------------------------------------------
    const handleSubmit = (e) => {
       e.preventDefault();
 
@@ -55,6 +57,7 @@ const ContactPage = () => {
          return;
       }
    };
+   //-----------------------------------------------------------------------
    return (
       <>
          <div className={`success-message ${success ? "show" : ""}`}>

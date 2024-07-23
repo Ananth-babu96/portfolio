@@ -5,7 +5,6 @@ import {
    FaInstagram,
    FaLinkedinIn,
    FaGithub,
-   FaDownload,
    FaReact,
    FaHtml5,
    FaCss3,
@@ -16,17 +15,9 @@ import {
    FaSass,
 } from "react-icons/fa6";
 import { TbBrandRedux } from "react-icons/tb";
-import pic from "../../images/portfolio-pic-2.png";
-import { FaJsSquare } from "react-icons/fa";
+
 import AnimatedIcons from "../../Components/AnimatedIcons/AnimatedIcons";
-const Home = ({
-   scrollFunction,
-   reference,
-   sideMenuNavigation,
-   aboutRef,
-   contactRef,
-   projectsRef,
-}) => {
+const Home = ({}) => {
    const icons = [
       <FaHtml5 />,
       <FaCss3 />,
@@ -65,12 +56,6 @@ const Home = ({
                      </div>
                   </div>
                </div>
-            </div>
-         </div>
-
-         <div className="scroll-down">
-            <div className="mouse" onClick={() => scrollFunction(reference)}>
-               <div className="dot"></div>
             </div>
          </div>
       </div>

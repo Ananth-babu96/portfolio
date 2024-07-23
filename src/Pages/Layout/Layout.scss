@@ -42,9 +42,6 @@
                   letter-spacing: 2px;
                }
             }
-
-            & p {
-            }
          }
       }
       .separator {
@@ -52,12 +49,7 @@
       }
    }
 }
-@media (max-width: 960px) {
-   .wrapper {
-      & .right {
-      }
-   }
-}
+
 @media (max-width: 860px) {
    .wrapper {
       flex-direction: column;
