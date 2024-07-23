@@ -102,7 +102,7 @@ const ContactPage = () => {
                <textarea
                   name="message"
                   id="message"
-                  placeholder="Email"
+                  placeholder="Message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
