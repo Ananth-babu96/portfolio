@@ -50,6 +50,17 @@
    }
 }
 
+.background-img {
+   position: fixed;
+   height: 100vh;
+   width: 100vw;
+   top: 0;
+   left: 0;
+   background-image: url("../../images/dark-bg.jpeg");
+   opacity: 0.1;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
 @media (max-width: 860px) {
    .wrapper {
       flex-direction: column;
@@ -81,5 +92,9 @@
 @media (max-width: 360px) {
    .wrapper {
       padding: 40px 20px;
+   }
+   .background-img {
+      background-image: url("../../images/dark-bg-mobile-2.jpeg");
+      opacity: 0.2;
    }
 }

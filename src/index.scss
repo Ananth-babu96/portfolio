@@ -3,6 +3,9 @@ body {
    margin: 0;
    font-family: "Montserrat", sans-serif;
    background-color: $bgColor;
+
+   position: relative;
+
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    overflow: auto;
