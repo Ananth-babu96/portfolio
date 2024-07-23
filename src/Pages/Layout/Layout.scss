@@ -2,10 +2,12 @@
 @import "animate.css";
 .wrapper {
    height: 100vh;
+
    display: flex;
    gap: 35px;
    padding: 40px 6%;
    width: 100vw;
+   position: relative;
    & .left {
       height: 100%;
       position: sticky;
@@ -48,6 +50,26 @@
          border: 1px solid $primeColor;
       }
    }
+
+   &.light-mode-wrapper {
+      & .right {
+         & section {
+            & .container {
+               & .title {
+                  color: $primeColorLight;
+               }
+            }
+         }
+         & .separator {
+            border-color: $primeColorLight;
+         }
+      }
+      & .left {
+         & .home-separator {
+            border-color: $primeColorLight;
+         }
+      }
+   }
 }
 
 .background-img {
@@ -57,10 +79,16 @@
    top: 0;
    left: 0;
    background-image: url("../../images/dark-bg.jpeg");
-   opacity: 0.1;
+   opacity: 0.07;
    background-repeat: no-repeat;
    background-size: cover;
+
+   &.light-mode-img {
+      background-image: url("../../images/light-bg-3.jpeg");
+      opacity: 0.2;
+   }
 }
+
 @media (max-width: 860px) {
    .wrapper {
       flex-direction: column;
@@ -96,5 +124,10 @@
    .background-img {
       background-image: url("../../images/dark-bg-mobile-2.jpeg");
       opacity: 0.2;
+
+      &.light-mode-img {
+         background-image: url("../../images/light-bg-mobile-2.jpeg");
+         opacity: 0.2;
+      }
    }
 }

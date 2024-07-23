@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import Loading from "../../Components/Loading/Loading";
 
-const ContactPage = () => {
+const ContactPage = ({ darkMode }) => {
    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
    const form = useRef();
@@ -60,7 +60,11 @@ const ContactPage = () => {
    //-----------------------------------------------------------------------
    return (
       <>
-         <div className={`success-message ${success ? "show" : ""}`}>
+         <div
+            className={`success-message ${success ? "show" : ""} ${
+               !darkMode ? "light-mode-success-message" : ""
+            }`}
+         >
             <div className="message-box">
                <div className="icon">
                   <FaRegCircleCheck />
@@ -76,7 +80,11 @@ const ContactPage = () => {
             <div className="text-zone">
                <p className="title">Contact</p>
             </div>
-            <form ref={form} onSubmit={handleSubmit}>
+            <form
+               ref={form}
+               onSubmit={handleSubmit}
+               className={!darkMode ? "light-mode-form" : ""}
+            >
                <p className="form-text">
                   Have a project for me? Any questions about something I've
                   built? I'd love to hear from you, give me a shout by using the
@@ -110,7 +118,9 @@ const ContactPage = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   required
                ></textarea>
-               <button>{isLoading ? <Loading /> : "send"}</button>
+               <button>
+                  {isLoading ? <Loading darkMode={darkMode} /> : "send"}
+               </button>
             </form>
          </div>
       </>

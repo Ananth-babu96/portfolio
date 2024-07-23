@@ -19,45 +19,76 @@
          width: 100%;
          gap: 10px;
 
+         & .social-links {
+            display: flex;
+            align-items: center;
+            gap: 20%;
+
+            & .links {
+               display: flex;
+               gap: 12px;
+               font-size: 18px;
+
+               & .link {
+                  transition: color 0.3s, rotate 0.3s;
+                  color: #fff;
+                  transform-origin: center;
+                  height: 20px;
+                  width: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  curosr: pointer;
+
+                  &:hover {
+                     color: $primeColor;
+                  }
+
+                  & a {
+                     all: unset;
+                     cursor: pointer;
+                  }
+               }
+            }
+         }
+
          & h1 {
             font-size: clamp(26px, 4vw, 125px);
             color: #fff;
-
             & span {
                color: $primeColor;
             }
+
+            &.light-mode-h1 {
+               color: #4a4a4a;
+
+               & span {
+                  color: $primeColorLight;
+               }
+            }
          }
       }
-   }
 
-   & .social-links {
-      display: flex;
-      align-items: center;
-      gap: 20%;
+      &.light-mode-home {
+         & .text-zone {
+            & h1 {
+               color: #4a4a4a;
 
-      & .links {
-         display: flex;
-         gap: 12px;
-         font-size: 18px;
-
-         & .link {
-            transition: color 0.3s, rotate 0.3s;
-            color: #fff;
-            transform-origin: center;
-            height: 20px;
-            width: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            curosr: pointer;
-
-            &:hover {
-               color: $primeColor;
+               & span {
+                  color: $primeColorLight;
+               }
             }
 
-            & a {
-               all: unset;
-               cursor: pointer;
+            & .social-links {
+               & .links {
+                  & .link {
+                     color: $fontColorLightMode;
+
+                     &:hover {
+                        color: $primeColorLight;
+                     }
+                  }
+               }
             }
          }
       }

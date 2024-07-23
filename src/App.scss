@@ -1,0 +1,65 @@
+@import "./globalStyles/globalStyles.scss";
+.App {
+   position: relative;
+
+   & .mode-btn {
+      position: fixed;
+      right: 38px;
+      top: 28px;
+      z-index: 20;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      & .switch {
+         width: 40px;
+         height: 20px;
+         background-color: #fff;
+         border-radius: 18px;
+         position: relative;
+         cursor: pointer;
+         z-index: 0;
+         transition: background-color 0.3s ease-in-out;
+
+         & .ball {
+            width: 18px;
+            height: 18px;
+            background-color: $fontColorLightMode;
+            border-radius: 50%;
+            position: absolute;
+            top: 1px;
+            left: 2px;
+            z-index: 1;
+            transition: background-color 0.3s ease-in-out,
+               transform 0.3s ease-in-out;
+         }
+      }
+      &.light-mode-btn {
+         & .switch {
+            background: $fontColorLightMode;
+            & .ball {
+               background: #fff;
+               transform: translateX(18px);
+            }
+         }
+      }
+   }
+}
+@media (max-width: 360px) {
+   .App {
+      & .mode-btn {
+         right: 10px;
+         & .switch {
+            height: 18px;
+            width: 36px;
+
+            & .ball {
+               height: 16px;
+               width: 16px;
+               left: 1px;
+            }
+         }
+      }
+   }
+}

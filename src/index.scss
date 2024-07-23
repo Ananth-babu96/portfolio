@@ -3,14 +3,24 @@ body {
    margin: 0;
    font-family: "Montserrat", sans-serif;
    background-color: $bgColor;
-
    position: relative;
-
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    overflow: auto;
+   transition: background-color 0.3s ease-in;
 }
+body.light-mode {
+   background-color: #fff;
 
+   & p {
+      color: #4a4a4a;
+      font-weight: 600;
+
+      & span {
+         color: $primeColorLight;
+      }
+   }
+}
 *,
 *::before,
 *::after {

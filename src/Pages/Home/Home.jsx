@@ -17,7 +17,7 @@ import {
 import { TbBrandRedux } from "react-icons/tb";
 
 import AnimatedIcons from "../../Components/AnimatedIcons/AnimatedIcons";
-const Home = ({}) => {
+const Home = ({ darkMode }) => {
    const icons = [
       <FaHtml5 />,
       <FaCss3 />,
@@ -31,9 +31,9 @@ const Home = ({}) => {
    ];
    return (
       <div className="container home">
-         <div className="home-top">
+         <div className={`home-top ${!darkMode ? "light-mode-home" : ""}`}>
             <div className="text-zone">
-               <h1>
+               <h1 className={!darkMode ? "light-mode-h1" : ""}>
                   Hi, i'm a <br />
                   <span>frontend developer.</span>
                </h1>

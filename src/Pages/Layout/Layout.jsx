@@ -6,14 +6,16 @@ import About from "../About/About";
 import ContactPage from "../Contact/ContactPage";
 import Projects from "../Projects/Projects";
 
-const Layout = () => {
+const Layout = ({ darkMode }) => {
    return (
       <>
-         <div className="background-img"></div>
-         <div className="wrapper">
+         <div
+            className={`background-img ${!darkMode ? "light-mode-img" : ""}`}
+         ></div>
+         <div className={`wrapper ${!darkMode ? "light-mode-wrapper" : ""}`}>
             <div className="left">
                <section>
-                  <Home />
+                  <Home darkMode={darkMode} />
                </section>
                <hr className="separator home-separator" />
             </div>
@@ -27,7 +29,7 @@ const Layout = () => {
                </section>
                <hr className="separator" />
                <section>
-                  <ContactPage />
+                  <ContactPage darkMode={darkMode} />
                </section>
                <hr className="separator" />
             </div>

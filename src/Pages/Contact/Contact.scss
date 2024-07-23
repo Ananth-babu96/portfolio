@@ -57,6 +57,24 @@
             box-shadow: none;
          }
       }
+
+      &.light-mode-form {
+         & input,
+         & textarea,
+         & button {
+            background: $lightGrey;
+            box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+            color: $fontColorLightMode;
+            font-weight: 600;
+
+            &:hover {
+               transform: translate(0, 0);
+               box-shadow: none;
+            }
+         }
+         & button {
+         }
+      }
    }
 }
 .success-message {
@@ -115,6 +133,28 @@
             &:hover {
                transform: translate(0, 0);
                box-shadow: none;
+            }
+         }
+      }
+   }
+   &.light-mode-success-message {
+      &.show {
+         & .message-box {
+            background: #fff;
+
+            & .icon {
+               color: $primeColorLight;
+            }
+            & button {
+               background: $lightGrey;
+               box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+               color: $fontColorLightMode;
+               font-weight: 600;
+
+               &:hover {
+                  transform: translate(0, 0);
+                  box-shadow: none;
+               }
             }
          }
       }

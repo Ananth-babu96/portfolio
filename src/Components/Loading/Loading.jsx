@@ -1,8 +1,10 @@
 import React from "react";
 import "./Loading.scss";
-const Loading = () => {
+const Loading = ({ darkMode }) => {
    return (
-      <div className="loader-container">
+      <div
+         className={`loader-container ${!darkMode ? "light-mode-loader" : ""}`}
+      >
          <div className="loader"></div>
          <div className="loader"></div>
          <div className="loader"></div>
