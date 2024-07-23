@@ -3,6 +3,7 @@
 .wrapper {
    height: 100vh;
    display: flex;
+   gap: 35px;
    padding: 40px 6%;
    width: 100vw;
    & .left {
@@ -35,23 +36,14 @@
                text-align: left;
                & .title {
                   color: $primeColor;
-                  font-size: 16px;
-                  font-weight: 800;
+                  font-weight: 700;
                   text-transform: uppercase;
                   padding-bottom: 14px;
+                  letter-spacing: 2px;
                }
             }
 
             & p {
-               color: #fff;
-               margin-bottom: 14px;
-               font-size: 18px;
-               text-align: left;
-               line-height: 28px;
-
-               & span {
-                  color: $primeColor;
-               }
             }
          }
       }
@@ -71,7 +63,6 @@
       flex-direction: column;
       justify-content: space-between;
 
-      padding: 40px;
       & .right {
          width: 100%;
 
@@ -95,15 +86,8 @@
       }
    }
 }
-@media (max-width: 560px) {
+@media (max-width: 360px) {
    .wrapper {
-      & .right {
-         & section {
-            & .container {
-               & .text-zone {
-               }
-            }
-         }
-      }
+      padding: 40px 20px;
    }
 }

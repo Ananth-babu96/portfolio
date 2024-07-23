@@ -20,16 +20,12 @@
          gap: 10px;
 
          & h1 {
-            font-size: clamp(23px, 3vw, 125px);
+            font-size: clamp(26px, 4vw, 125px);
             color: #fff;
 
             & span {
                color: $primeColor;
             }
-         }
-         & .about-me {
-            color: #fff;
-            font-size: clamp(18px, 1vw, 22px);
          }
       }
    }
@@ -111,7 +107,6 @@
       & .home-top {
          & .text-zone {
             & h1 {
-               font-size: 30px;
             }
          }
       }
@@ -126,10 +121,9 @@
       & .home-top {
          & .text-zone {
             & h1 {
-               font-size: 24px;
+               font-size: 28px;
             }
             & .about-me {
-               font-size: 16px;
             }
          }
       }

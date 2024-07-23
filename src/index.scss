@@ -17,6 +17,18 @@ body {
    -webkit-tap-highlight-color: transparent;
 }
 
+p {
+   font-size: 16px;
+   color: #fff;
+   margin-bottom: 14px;
+   text-align: left;
+   line-height: 28px;
+
+   & span {
+      color: $primeColor;
+   }
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
