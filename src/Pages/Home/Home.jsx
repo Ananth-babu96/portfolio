@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Home.scss";
 
 import {
@@ -15,20 +15,19 @@ import {
    FaSass,
 } from "react-icons/fa6";
 import { TbBrandRedux } from "react-icons/tb";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 import AnimatedIcons from "../../Components/AnimatedIcons/AnimatedIcons";
-const Home = ({ darkMode }) => {
-   const icons = [
-      <FaHtml5 />,
-      <FaCss3 />,
-      <FaSquareJs />,
-      <FaReact />,
-      <FaBootstrap />,
-      <FaSass />,
-      <TbBrandRedux />,
-      <FaNpm />,
-      <FaGitAlt />,
-   ];
+const Home = ({
+   darkMode,
+   aboutRef,
+   projectsRef,
+   contactRef,
+   currentSection,
+}) => {
+   const scrollFunction = (scrollTo) => {
+      scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center" });
+   };
    return (
       <div className="container home">
          <div className={`home-top ${!darkMode ? "light-mode-home" : ""}`}>
@@ -42,7 +41,6 @@ const Home = ({ darkMode }) => {
                   your users will love.
                </p>
 
-               <AnimatedIcons icons={icons} idx={8} />
                <div className="social-links">
                   <div className="links">
                      <div className="link">
@@ -72,6 +70,35 @@ const Home = ({ darkMode }) => {
                            <FaInstagram />
                         </a>
                      </div>
+                  </div>
+               </div>
+               <div className="navigations">
+                  <div
+                     onClick={() => scrollFunction(aboutRef)}
+                     className={
+                        currentSection === "about" ? "current-section" : ""
+                     }
+                  >
+                     <div className="line"></div>
+                     <p>about</p>
+                  </div>
+                  <div
+                     onClick={() => scrollFunction(projectsRef)}
+                     className={
+                        currentSection === "projects" ? "current-section" : ""
+                     }
+                  >
+                     <div className="line"></div>
+                     <p>projects</p>
+                  </div>
+                  <div
+                     onClick={() => scrollFunction(contactRef)}
+                     className={
+                        currentSection === "contact" ? "current-section" : ""
+                     }
+                  >
+                     <div className="line"></div>
+                     <p>contact</p>
                   </div>
                </div>
             </div>
