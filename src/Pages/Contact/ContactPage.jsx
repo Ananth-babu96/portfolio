@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import Loading from "../../Components/Loading/Loading";
+import LoadingDots from "../../Components/LoadingDots/LoadingDots";
 
 const ContactPage = ({ darkMode }) => {
    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -119,7 +119,7 @@ const ContactPage = ({ darkMode }) => {
                   required
                ></textarea>
                <button>
-                  {isLoading ? <Loading darkMode={darkMode} /> : "send"}
+                  {isLoading ? <LoadingDots darkMode={darkMode} /> : "send"}
                </button>
             </form>
          </div>

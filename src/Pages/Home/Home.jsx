@@ -1,23 +1,7 @@
-import React, { useRef } from "react";
 import "./Home.scss";
 
-import {
-   FaInstagram,
-   FaLinkedinIn,
-   FaGithub,
-   FaReact,
-   FaHtml5,
-   FaCss3,
-   FaSquareJs,
-   FaGitAlt,
-   FaNpm,
-   FaBootstrap,
-   FaSass,
-} from "react-icons/fa6";
-import { TbBrandRedux } from "react-icons/tb";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
-import AnimatedIcons from "../../Components/AnimatedIcons/AnimatedIcons";
 const Home = ({
    darkMode,
    aboutRef,
@@ -28,12 +12,14 @@ const Home = ({
    const scrollFunction = (scrollTo) => {
       scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center" });
    };
+
    return (
       <div className="container home">
          <div className={`home-top ${!darkMode ? "light-mode-home" : ""}`}>
             <div className="text-zone">
                <h1 className={!darkMode ? "light-mode-h1" : ""}>
-                  Hi, i'm a <br />
+                  Hi, i'm a
+                  <br />
                   <span>frontend developer.</span>
                </h1>
                <p className="about-me">

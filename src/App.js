@@ -24,8 +24,13 @@ function App() {
    return (
       <div className="App">
          <div className={`mode-btn ${!darkMode ? "light-mode-btn" : ""}`}>
-            <div className="switch" onClick={switchMode}>
-               <div className="ball"></div>
+            <div className="switch">
+               <div className="icon sun" onClick={switchMode}>
+                  <FaSun />
+               </div>
+               <div className="icon moon" onClick={switchMode}>
+                  <IoMoonSharp />
+               </div>
             </div>
          </div>
 

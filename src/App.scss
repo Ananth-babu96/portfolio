@@ -4,43 +4,44 @@
 
    & .mode-btn {
       position: fixed;
-      right: 38px;
+      right: 62px;
       top: 28px;
       z-index: 20;
-      height: 22px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
 
       & .switch {
-         width: 40px;
-         height: 20px;
-         background-color: #fff;
-         border-radius: 18px;
          position: relative;
-         cursor: pointer;
-         z-index: 0;
-         transition: background-color 0.3s ease-in-out;
+         height: 20px;
+         width: 60px;
 
-         & .ball {
-            width: 18px;
-            height: 18px;
-            background-color: $fontColorLightMode;
-            border-radius: 50%;
+         & .icon {
             position: absolute;
+            font-size: 24px;
+            color: #fff;
             top: 1px;
-            left: 2px;
-            z-index: 1;
-            transition: background-color 0.3s ease-in-out,
-               transform 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            &.sun {
+               left: 0;
+               opacity: 0;
+            }
+            &.moon {
+               right: 0;
+            }
          }
       }
+
       &.light-mode-btn {
          & .switch {
-            background: $fontColorLightMode;
-            & .ball {
-               background: #fff;
-               transform: translateX(18px);
+            & .icon {
+               color: $fontColorLightMode;
+               transform: translateX(42px);
+
+               &.moon {
+                  opacity: 0;
+               }
+               &.sun {
+                  opacity: 1;
+               }
             }
          }
       }
@@ -49,15 +50,10 @@
 @media (max-width: 360px) {
    .App {
       & .mode-btn {
-         right: 10px;
+         right: 32px;
          & .switch {
-            height: 18px;
-            width: 36px;
-
-            & .ball {
-               height: 16px;
-               width: 16px;
-               left: 1px;
+            & .icon {
+               font-size: 18px;
             }
          }
       }

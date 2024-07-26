@@ -1,5 +1,5 @@
 import React from "react";
-import "./Loading.scss";
+import "./LoadingDots.scss";
 const Loading = ({ darkMode }) => {
    return (
       <div
